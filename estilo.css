@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Ubuntu', 'sans-serif';
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #000080, #483D8B);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+main.container {
+    min-width: 280px;
+    min-height: 45vh;
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 5px 5px 5px rgba(0,0,0, 0.5);
+    border-radius: 8px;
+}
+
+main h1 {
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+main h1::before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    bottom: 0px;
+    height: 3px;
+    width: 25px;
+    border-radius: 10px;
+    background:linear-gradient(45deg, #000080, #cac8da); 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form .input-fields :first-child {
+    margin-top: 0.3rem;
+}
+
+.input-fields {
+position: relative;
+}
+
+.input-fields input {
+    outline: none;
+    width: 100%;
+    padding: 0.4rem;
+    color: rgba(0,0,0, 0.8);
+
+}
+
+.input-fields .underline::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(0,0,0, 0.2);
+}
+
+.input-fields .underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background:linear-gradient(to right, #000080, #cac8da); 
+    transform: scaleX(0);
+    transition: all 300ms ease-out;
+    transform-origin: left;
+}
+
+.input-fields input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+
+.input-fields input::placeholder {
+   color: rgba(0,0,0, 0.4);
+}
+
+input.button {
+    padding: 0.4rem;
+    margin-top: 0.5rem;
+    color: #fff;
+    background: linear-gradient(to right, #000080, #483D8B); 
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 300ms ease;
+}
+
+input.button:hover {
+    letter-spacing: 1px;
+    background: linear-gradient(to left, #000080, #483D8B); 
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+footer span {
+    font-size: small;
+    color: rgba(0,0,0, 0.8);
+    text-align: center;
+}
+
+footer .twitter-field {
+    margin-top: 0.8rem;
+    padding: 0.4rem;
+    width: 100%;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    background: linear-gradient(to left, #6ec6e6, #00aced);
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    
+    
+}
+
+footer .facebook-field {
+    margin-top: 0.5rem;
+    padding: 0.4rem;
+    width: 100%;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    background: linear-gradient(to right,#3b5998, #758dc2);
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+   
+}
+
+footer .twitter-field:hover {
+    letter-spacing: 1px;
+}
+
+footer .facebook-field:hover {
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#tw {
+    margin: 0 5px;
+}
+
+#fb {
+    margin: 0 5px;
+}
+
+
+
